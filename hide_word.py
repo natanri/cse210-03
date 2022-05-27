@@ -1,5 +1,4 @@
 import random
-import re
 from jumper import Jumper
 
 class Hide_Words:
@@ -12,7 +11,7 @@ class Hide_Words:
         self.select_letter = ""
         self.word_listed = []
         self.length = 0
-        self.erros = 0
+        self.errors = 0
         self.jumper = jumper
 
 
@@ -51,8 +50,9 @@ class Hide_Words:
         """
         reveal the letter
         """
-
         self.select_letter = letter
         for i in range(self.length):
             if self.select_letter == self.word_listed[i]:
-                
+                self.select_word[i] = self.select_letter
+        return(self.select_word)
+
