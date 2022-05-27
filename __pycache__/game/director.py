@@ -1,5 +1,6 @@
-from jumper import Jumper
-from hide_word import Hide_Words
+from game.jumper import Jumper
+from game.hide_word import Hide_Words
+from game.terminal import Terminal
 
 class Director:
     """
@@ -56,7 +57,7 @@ class Director:
         """
         This will activate all functions
         """
-        while self.run:
+        while self.is_palying:
             if self.first_game == False:
                 self.get_inputs()
                 self.update()

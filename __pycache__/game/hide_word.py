@@ -1,5 +1,4 @@
 import random
-from jumper import Jumper
 
 class Hide_Words:
 
